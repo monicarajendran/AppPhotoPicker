@@ -249,7 +249,7 @@ public struct TLPHAsset {
     //This method was one of them.
     public func exportVideoFile(options: PHVideoRequestOptions? = nil, progressBlock:((Float) -> Void)? = nil, completionBlock:@escaping ((URL,String) -> Void)) {
         guard let phAsset = self.phAsset, phAsset.mediaType == .video else { return }
-        var type = PHAssetResourceType.video
+		let type = PHAssetResourceType.video
         guard let resource = (PHAssetResource.assetResources(for: phAsset).filter{ $0.type == type }).first else { return }
         let fileName = resource.originalFilename
         var writeURL: URL? = nil
