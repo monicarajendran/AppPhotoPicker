@@ -1,6 +1,6 @@
 {
   "name": "AppPhotoPicker",
-  "version": "3.4.9",
+  "version": "3.5.2",
   "summary": "Catchy photo picker, just like facebook",
   "homepage": "https://github.com/monicarajendran/AppPhotoPicker",
   "license": {
@@ -12,10 +12,10 @@
   },
   "source": {
     "git": "https://github.com/monicarajendran/AppPhotoPicker.git",
-    "tag": "3.4.9"
+    "tag": "3.5.2"
   },
   "platforms": {
-    "ios": "9.3"
+    "ios": "10.0"
   },
   "swift_versions": "5.0",
   "source_files": "AppPhotoPicker/Classes/**/*",
