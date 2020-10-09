@@ -226,10 +226,13 @@ open class TLPhotosPickerViewController: UIViewController {
             }
             case .authorized:
                 self.initPhotoLibrary()
-            case .restricted: fallthrough
+            case .restricted:
+				fallthrough
             case .denied:
                 handleDeniedAlbumsAuthorization()
-            @unknown default:
+			case .limited:
+				break
+			@unknown default:
                 break
         }
     }
@@ -259,11 +262,9 @@ open class TLPhotosPickerViewController: UIViewController {
     }
     
     open func deselectWhenUsingSingleSelectedMode() {
-        if
-            self.configure.singleSelectedMode == true,
-            let selectedPHAsset = self.selectedAssets.first,
-            var indexPath = self.focusedCollection?.getIndexPath(of: selectedPHAsset)
-        {
+        if self.configure.singleSelectedMode == true,
+		   let selectedPHAsset = self.selectedAssets.first,
+		   let indexPath = self.focusedCollection?.getIndexPath(of: selectedPHAsset) {
             self.selectedAssets.removeAll()
             self.collectionView.reloadItems(at: [indexPath])
         }

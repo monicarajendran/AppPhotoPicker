@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/monicarajendran/AppPhotoPicker.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/monica__raja'
 
-  s.ios.deployment_target = '`10.0'
+  s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
   s.source_files = 'AppPhotoPicker/Classes/**/*'
   s.resource_bundles = { 'AppPhotoPicker' => ['AppPhotoPicker/Classes/*.xib'] }
